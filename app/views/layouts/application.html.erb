@@ -1,14 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-  <title>AlienApp</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+	<title>Look, I said aliens are invading our planet... | <%= @title %></title>
+  <%= csrf_meta_tag %> # Cross-Site Request Forgery
 </head>
 <body>
-
-<%= yield %>
-
+  <%= yield %>
 </body>
+<footer>
+</footer>
 </html>
