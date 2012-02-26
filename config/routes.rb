@@ -1,9 +1,19 @@
 AlienApp::Application.routes.draw do
-  get "pages/home"
 
-  get "pages/contact"
+# we create a singular get route here
+get "pages/:uber_page" => "pages#show"
 
-  get "pages/about"
+
+
+
+
+
+#  get "pages/home" => "pages#home" 
+#
+#  get "pages/contact" => "pages#contact"
+#
+#  get "pages/about" => "pages#about"
+#
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -60,4 +70,6 @@ AlienApp::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
+  # =======> eric says this is what allows pages to automatically hook up to the controller, but
+  # it's good practice to specify manually the routes, also
 end
